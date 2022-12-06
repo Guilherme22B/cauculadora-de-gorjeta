@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scipts/index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>cauculadora-de-gorjeta</title>
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="LOgo do spliter">
+    </header>
+    <main>
+        <form action="">
+            <div class="bill distance">
+                <label for="">Bill</label>
+                <div class="input-box">
+                    <img src="images/icon-dollar.svg" alt="icone da moeda dollar">
+                    <input type="number" id="bill-input" placeholder="0" onchange="receberConta()">
+                </div>
+            </div>
+
+            <div class="tip distance">
+                <label>Select tip %</label>
+                <div class="input-boxes">
+                <input type="button" value="5%" onclick="receberPorcentagem(5)">
+                <input type="button" value="10%"onclick="receberPorcentagem(10)">
+                <input type="button" value="15%"onclick="receberPorcentagem(15)">
+                <input type="button" value="25%"onclick="receberPorcentagem(25)">
+                <input type="button" value="50%"onclick="receberPorcentagem(50)">
+                <input type="number" id="tip-input" placeholder="Custom" onchange="receberPorcentagem(0)">
+            </div>
+            </div>
+
+            <div class="people distance">
+                <label for="people-input">number of people</label>
+                <div class="input-box">
+                    <img src="images/icon-person.svg" alt="icone da pessoa">
+                    <input type="number" id="people-input" placeholder="0" onchange="ReceberNumeroDePessoas()">
+                </div>
+            </div>
+        </form>
+
+        <section class="results">
+            <div class="results-value">
+                <div class="tip-amond">
+                    <p>tip amont <br> <span>/ person</span></p>
+                    <p id="tip-amont_result">R$0.00</p>
+                </div>
+                <div class="total">
+                <p>total <br> <span>/ person</span></p>
+                <p id="total_results"> R$0.00</p>
+                </div>
+            </div>
+            <button onclick="reset()">Reset</button>
+        </section> 
+    </main>
+</body>
+</html>
